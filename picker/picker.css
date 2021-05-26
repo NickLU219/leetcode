@@ -1,0 +1,112 @@
+#cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    visibility: hidden;
+    opacity: 0;
+    transition: .6s;
+    z-index: 9999999;
+}
+
+#cover.show {
+    visibility: visible;
+    opacity: .5;
+    transition: .3s;
+}
+
+#cover.show,
+#picker {
+    transition: .3s;
+    z-index: 99999999;
+}
+
+#picker {
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%)
+}
+
+#picker.show {
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+}
+
+.picker-header {
+    position: relative;
+    background-color: #f2f2f4;
+    height: .8rem;
+    line-height: .8rem;
+    z-index: 3;
+    color: #007af0;
+    font-size: .34rem;
+}
+
+.picker-header .cancel {
+    position: absolute;
+    top: 0;
+    left: .3rem;
+}
+
+.picker-header .confirm {
+    position: absolute;
+    top: 0;
+    right: .3rem;
+}
+
+.picker-items {
+    position: relative;
+    height: 4.32rem;
+    overflow: hidden
+}
+
+.picker-items-col {
+    float: left;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+.picker-item {
+    height: .6rem;
+    line-height: .6rem;
+    font-size: .4rem;
+    box-sizing: border-box;
+    left: 0;
+    color: #000;
+    width: 100%;
+    text-align: center;
+    z-index: 1
+}
+
+.picker-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1.8rem;
+    z-index: 10;
+    /*!* autoprefixer: off *!*/
+    background: -webkit-linear-gradient(top, #fff, hsla(0, 0%, 100%, .7));
+    background: linear-gradient(top, #fff, hsla(0, 0%, 100%, .7));
+    border-bottom: .02rem solid #ddd;
+    pointer-events: none
+}
+
+.picker-line-bottom {
+    top: auto;
+    bottom: 0;
+    border-top: .02rem solid #ddd;
+    border-bottom: none;
+    /*!* autoprefixer: off *!*/
+    background: -webkit-linear-gradient(bottom, #fff, hsla(0, 0%, 100%, .7));
+    background: linear-gradient(bottom, #fff, hsla(0, 0%, 100%, .7))
+}
